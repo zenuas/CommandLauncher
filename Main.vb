@@ -59,7 +59,7 @@ Public Class Main
                 End If
             End Sub
         AddHandler list.DoubleClick, Sub(sender, e) select_item(list.SelectedItems(0).Tag.ToString)
-        AddHandler list.KeyDown, Sub(sender, e) If (e.KeyData And Keys.Enter) = Keys.Enter Then select_item(list.SelectedItems(0).Tag.ToString)
+        AddHandler list.KeyDown, Sub(sender, e) If (e.KeyData And Keys.KeyCode) = Keys.Enter Then select_item(list.SelectedItems(0).Tag.ToString)
 
         Application.Run(f)
     End Sub
