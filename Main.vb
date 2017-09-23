@@ -38,6 +38,7 @@ Public Class Main
 
                     list.Items.Add(IO.Path.GetFileNameWithoutExtension(lnk)).Tag = IO.Path.GetFullPath(lnk)
                 Next
+                If list.Items.Count > 0 Then list.SelectedIndices.Add(0)
                 list.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent)
             End Sub
 
